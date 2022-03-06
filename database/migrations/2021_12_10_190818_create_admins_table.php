@@ -31,7 +31,7 @@ class CreateAdminsTable extends Migration
 
         DB::table('admins')->insert(array(
             'name' => 'Administrator',
-            'email' => 'debnathtapash56@gmail.com',
+            'email' => 'admin@admin.com',
             'password' => Hash::make('admin123'),
             'remember_token' => '1234512d1c2f4ds3zc2132',
             'role_id' => '1'
