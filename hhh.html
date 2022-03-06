@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <label for="type">
+            <br>Type
+        </label>
+        <div class="form-group">
+            <label class="radio-inline">
+                <input
+                    type="radio"
+                    name="type"
+                    id="packate"
+                    value="packet"
+                    checked
+                >Packet
+            </label>
+            <label class="radio-inline">
+                <input
+                    type="radio"
+                    name="type"
+                    id="loose"
+                    value="loose"
+                >Loose
+            </label>
+        </div>
+        <hr>
+        <div id="packate_div" style="display:block">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="form-group packate_div">
+                        <label for="exampleInputEmail1">Measurement</label>
+                        <i class="text-danger asterik">*</i>
+                        <input
+                            type="number"
+                            step="any"
+                            min="0"
+                            class="form-control"
+                            name="packate_measurement[]"
+                            required
+                        >
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="form-group packate_div">
+                        <label for="unit">Unit:</label>
+                        <select class="form-control" name="packate_measurement_unit_id[]">
+                            <option value="1">kg</option>
+                            <option value="2">gm</option>
+                            <option value="3">ltr</option>
+                            <option value="4">ml</option>
+                            <option value="5">pack</option>
+                            <option value="6">pc</option>
+                            <option value="7">m</option>
+                            <option value="8">Plate</option>
+                            <option value="9">Plate</option>
+                            <option value="10">CUP</option>
+                            <option value="11">CUP</option>
+                            <option value="12">set</option>
+                            <option value="13">set</option>
+                            <option value="14">Pound</option>
+                            <option value="15">Pound</option>
+                            <option value="16">glass</option>
+                            <option value="17">glass</option>
+                            <option value="18">Plate</option>
+                            <option value="19">Plate</option>
+                            <option value="20">inch</option>
+                            <option value="21">inch</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group packate_div">
+                        <label for="price">Price (₹):</label>
+                        <i class="text-danger asterik">*</i>
+                        <input
+                            type="number"
+                            step="any"
+                            min="0"
+                            class="form-control"
+                            name="packate_price[]"
+                            id="packate_price"
+                            required
+                        >
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group packate_div">
+                        <label for="discounted_price">Discounted Price(₹):</label>
+                        <input
+                            type="number"
+                            step="any"
+                            min="0"
+                            class="form-control"
+                            name="packate_discounted_price[]"
+                            id="discounted_price"
+                        >
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="form-group packate_div">
+                        <label for="qty">Stock:</label>
+                        <i class="text-danger asterik">*</i>
+                        <input
+                            type="number"
+                            step="any"
+                            min="0"
+                            class="form-control"
+                            name="packate_stock[]"
+                            required=""
+                        >
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="form-group packate_div">
+                        <label for="unit">Unit:</label>
+                        <select class="form-control" name="packate_stock_unit_id[]">
+                            <option value="1">kg</option>
+                            <option value="2">gm</option>
+                            <option value="3">ltr</option>
+                            <option value="4">ml</option>
+                            <option value="5">pack</option>
+                            <option value="6">pc</option>
+                            <option value="7">m</option>
+                            <option value="8">Plate</option>
+                            <option value="9">Plate</option>
+                            <option value="10">CUP</option>
+                            <option value="11">CUP</option>
+                            <option value="12">set</option>
+                            <option value="13">set</option>
+                            <option value="14">Pound</option>
+                            <option value="15">Pound</option>
+                            <option value="16">glass</option>
+                            <option value="17">glass</option>
+                            <option value="18">Plate</option>
+                            <option value="19">Plate</option>
+                            <option value="20">inch</option>
+                            <option value="21">inch</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group packate_div">
+                        <label for="qty">Status:</label>
+                        <select name="packate_serve_for[]" class="form-control" required>
+                            <option value="Available">Available</option>
+                            <option value="Sold Out">Sold Out</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <label>Variation</label>
+                    <a id="add_packate_variation" title="Add variation of product" style="cursor: pointer;">
+                        <i class="fa fa-plus-square-o fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="loose_div" style="display:block;">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group loose_div">
+                        <label for="exampleInputEmail1">Measurement</label>
+                        <i class="text-danger asterik">*</i>
+                        <input
+                            type="number"
+                            step="any"
+                            min="0"
+                            class="form-control"
+                            name="loose_measurement[]"
+                            required=""
+                        >
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group loose_div">
+                        <label for="unit">Unit:</label>
+                        <select class="form-control" name="loose_measurement_unit_id[]">
+                            <option value="1">kg</option>
+                            <option value="2">gm</option>
+                            <option value="3">ltr</option>
+                            <option value="4">ml</option>
+                            <option value="5">pack</option>
+                            <option value="6">pc</option>
+                            <option value="7">m</option>
+                            <option value="8">Plate</option>
+                            <option value="9">Plate</option>
+                            <option value="10">CUP</option>
+                            <option value="11">CUP</option>
+                            <option value="12">set</option>
+                            <option value="13">set</option>
+                            <option value="14">Pound</option>
+                            <option value="15">Pound</option>
+                            <option value="16">glass</option>
+                            <option value="17">glass</option>
+                            <option value="18">Plate</option>
+                            <option value="19">Plate</option>
+                            <option value="20">inch</option>
+                            <option value="21">inch</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group loose_div">
+                        <label for="price">Price (₹):</label>
+                        <i class="text-danger asterik">*</i>
+                        <input
+                            type="number"
+                            step="any"
+                            min="0"
+                            class="form-control"
+                            name="loose_price[]"
+                            id="loose_price"
+                            required=""
+                        >
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group loose_div">
+                        <label for="discounted_price">Discounted Price(₹):</label>
+                        <input
+                            type="number"
+                            step="any"
+                            min="0"
+                            class="form-control"
+                            name="loose_discounted_price[]"
+                            id="discounted_price"
+                        >
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <label>Variation</label>
+                    <a id="add_loose_variation" title="Add variation of product" style="cursor: pointer;">
+                        <i class="fa fa-plus-square-o fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="variations"></div>
+    </body>
+</html>

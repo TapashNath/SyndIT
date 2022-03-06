@@ -1,0 +1,39 @@
+{
+    "_token": "k5Q4iX30jlSErZp3me4gjm2fIRUfiJU8YZXzkYGY",
+    "category_id": "6",
+    "sub_category_id": "9",
+    "child_category_id": "14",
+    "brand_id": "0",
+    "product_name": "Product Name",
+    "product_short_desc": "Product Short Description",
+    "product_desc": "<p><span style=\"font-weight: 700;\">Product Description<\/span><br><\/p>",
+    "latest": "createBrand",
+    "feature": "createBrand",
+    "quantity": null,
+    "datepickerfrom": null,
+    "m": null,
+    "u": "0",
+    "p": null,
+    "di_p": null,
+    "d_p": null,
+    "measurement": [
+        "200"
+    ],
+    "unit_id": [
+        "3"
+    ],
+    "price": [
+        "150"
+    ],
+    "discounted_price": [
+        "74"
+    ],
+    "discounted_percentage": [
+        "51"
+    ],
+    "images": [
+        {},
+        {},
+        {}
+    ]
+}

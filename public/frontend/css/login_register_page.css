@@ -1,0 +1,611 @@
+.login_register
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: rgb(232, 240, 241);
+    overflow: hidden;
+}
+
+/* ======= login ======== */
+
+
+.login_register .login_page
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.login_register .login_page .img_side
+{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    /* border: 0.2px solid red; */
+    background-image: url(../img/img2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;    
+}
+.login_register .login_page .img_side .overlayer
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient( at center center, rgba(14, 175, 135, 0.719) 24%, rgba(16, 192, 148, 0.918) 100%);  
+}
+.login_register .login_page .img_side .img_content
+{
+   position: relative;
+   width: 100%;
+   height: 100%;
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 75px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.login_register .login_page .img_side .img_content .logo
+{
+    position: absolute;
+    top: 50px;
+    left: 75px;
+    font-family: 'Open Sans', sans-serif;
+}
+.login_register .login_page .img_side .img_content .logo h2
+{
+    margin: 0;
+    font-size: 32px;
+    font-weight: 630;
+    font-style: italic;
+    color: #fff;
+}
+.login_register .login_page .img_side .img_content h1
+{
+    margin: 0;
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+}
+.login_register .login_page .img_side .img_content p
+{
+    margin: 0;
+   margin-top: 8px;
+   font-size: 17px;
+   font-weight: 400;
+   color: rgb(250, 245, 245);
+}
+
+
+.login_register .login_page .form_side
+{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login_register .login_page .form_side .form_overlay
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient( at center center, rgba(14, 175, 135, 0.719) 24%, rgba(16, 192, 148, 0.918) 100%);  
+    display: none;
+}
+.login_register .login_page .form_side .form_box
+{
+    width: 70%;
+    min-height: 300px;
+    /* border: 0.2px solid blue; */
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+.login_register .login_page .form_side .form_box h1
+{
+    margin: 0;
+    font-size: 30px;
+    font-weight: 500;
+    color: #222;
+    margin-bottom: 20px;
+}
+.login_register .login_page .form_side .form_box .input_box
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+.login_register .login_page .form_side .form_box .input_box h5
+{
+    margin: 0;
+    font-size: 16px;
+    color: #4c4d4d;
+    font-weight: 400;
+}
+.login_register .login_page .form_side .form_box .input_box input
+{
+    position: relative;
+    margin-top: 8px;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 6px 13px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #747474;
+    background: #fff;
+    border: 0.2px solid rgba(194, 229, 222, 0.918);
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+}
+.login_register .login_page .form_side .form_box .set_section
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.login_register .login_page .form_side .form_box .set_section .remember
+{
+    position: relative;
+}
+.login_register .login_page .form_side .form_box .set_section .remember label
+{
+    font-size: 13.5px;
+    font-weight: 400;
+    color: #646464;
+}
+.login_register .login_page .form_side .form_box .set_section .forgot
+{
+    position: relative;
+    margin-left: auto;
+}
+.login_register .login_page .form_side .form_box .set_section .forgot a
+{
+    text-decoration: none;
+    font-size: 13.8px;
+    color: rgb(42, 170, 138);
+}
+.login_register .login_page .form_side .form_box .set_section .forgot a:hover
+{
+    color: rgb(3, 102, 77);
+}
+
+.login_register .login_page .form_side .form_box button
+{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    background: rgb(42, 170, 138);
+    border: none;
+    color: #fff;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.15);
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+.login_register .login_page .form_side .form_box button:hover
+{
+    background: rgb(5, 134, 102);
+    transition: 0.4s;
+}
+
+
+.login_register .login_page .form_side .form_box .signup_btn
+{
+    position: relative;
+    margin-top: 16px;
+    width: 100%;
+    text-align: center;
+}
+.login_register .login_page .form_side .form_box .signup_btn p
+{
+    margin: 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: #4c4d4d;
+}
+.login_register .login_page .form_side .form_box .signup_btn p a
+{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(42, 170, 138);
+}
+.login_register .login_page .form_side .form_box .signup_btn p a:hover
+{
+    text-decoration: underline;
+}
+
+
+/* =========  register ========= */
+
+.login_register .registration_page
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.login_register .registration_page .form_side
+{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 0.2px solid green; */
+}
+.login_register .registration_page .form_side .form_overlay
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient( at center center, rgba(14, 175, 135, 0.719) 24%, rgba(16, 192, 148, 0.918) 100%);  
+    display: none;
+}
+.login_register .registration_page .form_side .form_box
+{
+    width: 70%;
+    min-height: 300px;
+    /* border: 0.2px solid blue; */
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+.login_register .registration_page .form_side .form_box h1
+{
+    margin: 0;
+    font-size: 30px;
+    font-weight: 500;
+    color: #222;
+    margin-bottom: 20px;
+}
+.login_register .registration_page .form_side .form_box .input_box
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+.login_register .registration_page .form_side .form_box .input_box h5
+{
+    margin: 0;
+    font-size: 16px;
+    color: #4c4d4d;
+    font-weight: 400;
+}
+.login_register .registration_page .form_side .form_box .input_box input
+{
+    position: relative;
+    margin-top: 8px;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 6px 13px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #747474;
+    background: #fff;
+    border: 0.2px solid rgba(194, 229, 222, 0.918);
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+}
+.login_register .registration_page .form_side .form_box button
+{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-top: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    background: rgb(42, 170, 138);
+    border: none;
+    color: #fff;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.15);
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+.login_register .registration_page .form_side .form_box button:hover
+{
+    background: rgb(5, 134, 102);
+    transition: 0.4s;
+}
+
+
+.login_register .registration_page .form_side .form_box .signup_btn
+{
+    position: relative;
+    margin-top: 16px;
+    width: 100%;
+    text-align: center;
+}
+.login_register .registration_page .form_side .form_box .signup_btn p
+{
+    margin: 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: #4c4d4d;
+}
+.login_register .registration_page .form_side .form_box .signup_btn p a
+{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(42, 170, 138);
+}
+.login_register .registration_page .form_side .form_box .signup_btn p a:hover
+{
+    text-decoration: underline;
+}
+
+
+
+.login_register .registration_page .img_side
+{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    /* border: 0.2px solid red; */
+    background-image: url(../img/img8.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.login_register .registration_page .img_side .overlayer
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient( at center center, rgba(14, 175, 135, 0.719) 24%, rgba(16, 192, 148, 0.918) 100%); 
+}
+.login_register .registration_page .img_side .img_content
+{
+    position: relative;
+   width: 100%;
+   height: 100%;
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 75px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.login_register .registration_page .img_side .img_content .logo
+{
+    position: absolute;
+    top: 50px;
+    right:  75px;
+    font-family: 'Open Sans', sans-serif;
+}
+.login_register .registration_page .img_side .img_content .logo h2
+{
+    margin: 0;
+    font-size: 32px;
+    font-weight: 630;
+    font-style: italic;
+    color: #fff;
+}
+.login_register .registration_page .img_side .img_content h1
+{
+    margin: 0;
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+}
+.login_register .registration_page .img_side .img_content p
+{
+    margin: 0;
+   margin-top: 8px;
+   font-size: 17px;
+   font-weight: 400;
+   color: rgb(250, 245, 245);
+}
+
+
+/* =========  Animation ========= */
+
+.login_register .login_page .img_side
+{
+    top: 0%;    
+    transition: 0.9s;
+}
+.login_register.active .login_page .img_side
+{
+    top: -105%;    
+    transition: 0.9s;
+}
+.login_register .login_page .form_side
+{
+    top: 0%;    
+    transition: 0.9s;
+}
+.login_register.active .login_page .form_side
+{
+    top: 100%;    
+    transition: 0.9s;
+}
+
+
+.login_register .registration_page
+{
+    pointer-events: none;
+}
+.login_register.active .registration_page
+{
+    pointer-events: initial;
+}
+.login_register .registration_page .form_side
+{
+    left: -100%;
+    transition: 0.9s;
+}
+.login_register.active .registration_page .form_side
+{
+    left: 0%;
+    transition: 0.9s;
+}
+.login_register .registration_page .img_side
+{
+    right: -100% ;
+    transition: 0.9s;
+}
+.login_register.active .registration_page .img_side
+{
+    right: 0% ;
+    transition: 0.9s;
+}
+
+
+
+
+
+
+
+
+
+/* ============= responsive ============= */
+
+@media only screen  and (max-width:900px)
+{
+    .login_register .login_page .form_side .form_box,
+    .login_register .registration_page .form_side .form_box
+    {
+        width: 85%;
+    }
+}
+
+
+
+@media only screen  and (max-width:670px)
+{
+
+    /* ======== login ======== */
+
+    .login_register .login_page .img_side
+    {
+        display: none;
+    }
+    .login_register .login_page .form_side
+    {
+        width: 100%;
+        background-image: url(../img/img2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    }
+    .login_register .login_page .form_side .form_box 
+    {
+        z-index: 20;
+    }
+    .login_register .login_page .form_side .form_box h1
+    {
+        color: #fff;
+    }
+    .login_register .login_page .form_side .form_box .input_box h5,
+    .login_register .login_page .form_side .form_box .set_section .remember label
+    {
+        color: rgb(253, 253, 253);
+    }
+    .login_register .login_page .form_side .form_box button
+    {
+        background: #fff;
+        color:rgb(42, 170, 138) ;
+    }
+    .login_register .login_page .form_side .form_box button:hover
+    {
+        background: rgb(219, 218, 218);
+    }
+    .login_register .login_page .form_side .form_box .signup_btn p
+    {
+        color: #fff;
+    }
+    .login_register .login_page .form_side .form_box .signup_btn p a
+    {
+        color: aqua;
+    }
+    .login_register .login_page .form_side .form_overlay
+{
+    display: block;
+}
+
+
+    /* ======== register ========= */
+
+ 
+    .login_register .registration_page .img_side
+{
+    display: none;
+}
+.login_register .registration_page .form_side 
+    {
+        width: 100%;
+        background-image: url(../img/img8.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    }
+    .login_register .registration_page .form_side .form_overlay
+{
+    display: block;
+}
+.login_register .registration_page .form_side .form_box 
+    {
+        z-index: 20;
+    }
+    .login_register .registration_page .form_side .form_box h1
+    {
+        color: #fff;
+    }
+    .login_register .registration_page .form_side .form_box .input_box h5
+    {
+        color: rgb(253, 253, 253);
+    }
+    .login_register .registration_page .form_side .form_box button
+    {
+        background: #fff;
+        color:rgb(42, 170, 138) ;
+    }
+    .login_register .registration_page .form_side .form_box button:hover
+    {
+        background: rgb(219, 218, 218);
+    }
+    .login_register .registration_page .form_side .form_box .signup_btn p
+    {
+        color: #fff;
+    }
+    .login_register .registration_page .form_side .form_box .signup_btn p a
+    {
+        color: aqua;
+    }
+}

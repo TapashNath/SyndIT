@@ -1,0 +1,376 @@
+.send_money_form,
+.receive_money_form
+{
+    position: fixed;
+    top: 5%;
+    left: 0%;
+    width: 100%;
+    min-height: 300px;
+    background: transparent;
+    border-radius: 15px;   
+    box-sizing: border-box;
+    z-index: 50;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s; 
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+.send_money_form.active,
+.receive_money_form.active
+{
+    top: 10%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+.send_money_form .popup_content,
+.receive_money_form .popup_content
+{
+    position: relative;
+    width: 400px;
+    height: 100%;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.send_money_form .popup_content .transfer_form,
+.receive_money_form .popup_content .transfer_form
+{
+    position: relative;
+    width: 400px;
+    min-height: 250px;
+    background: rgb(42, 170, 138);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 6px;
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.15);
+}
+.send_money_form .popup_content .transfer_form .type_indicator,
+.receive_money_form .popup_content .transfer_form .type_indicator
+{
+    position: relative;
+    border-radius: 6px 6px 0px 0px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    overflow: hidden;
+}
+.send_money_form .popup_content .transfer_form .type_indicator .send_indicate,
+.receive_money_form .popup_content .transfer_form .type_indicator .receive_indicate
+{
+    position: relative;
+    width: 50%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: #fff;
+}
+.send_money_form .popup_content .transfer_form .type_indicator .close_indicate
+{
+    position: relative;
+    width: 50%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+.receive_money_form .popup_content .transfer_form .type_indicator .close_indicate
+{
+    position: relative;
+    width: 50%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+.send_money_form .popup_content .transfer_form .type_indicator .close_indicate a
+{
+    position: relative;
+    margin-right: 30px;
+    font-size: 20px;
+    color: #fff;
+}
+.receive_money_form .popup_content .transfer_form .type_indicator .close_indicate a
+{
+    position: relative;
+    margin-left: 30px;
+    font-size: 20px;
+    color: #fff;
+}
+
+
+.send_money_form .popup_content .transfer_form .tranfer_form_section,
+.receive_money_form .popup_content .transfer_form .tranfer_form_section
+{
+    position: relative;
+    border-radius: 0px 0px 6px 6px;
+    overflow: hidden;
+    background: #fff;
+}
+.send_money_form .popup_content .transfer_form .tranfer_form_section .send_form_box-1,
+.receive_money_form .popup_content .transfer_form .tranfer_form_section .request_form_box-1
+{
+    position: relative;
+    width: 100%;
+    min-height: 250px;
+    background: #fff;
+}
+.send_money_form .popup_content .transfer_form .tranfer_form_section .send_form_box-1 .box_content,
+.receive_money_form .popup_content .transfer_form .tranfer_form_section .request_form_box-1 .box_content
+{
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100px;
+    padding: 25px;
+}
+.send_money_form .popup_content .transfer_form .tranfer_form_section .send_form_box-1 .box_content .input_box,
+.receive_money_form .popup_content .transfer_form .tranfer_form_section .request_form_box-1 .box_content .input_box,
+.send_money_form .popup_content .transfer_form .tranfer_form_section .send_form_box-1 .box_content .input_box_1,
+.receive_money_form .popup_content .transfer_form .tranfer_form_section .request_form_box-1 .box_content .input_box_1
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 17px;
+    border-radius: 5px;
+}
+.send_money_form .popup_content .transfer_form .tranfer_form_section .send_form_box-1 .box_content .input_box h5,
+.receive_money_form .popup_content .transfer_form .tranfer_form_section .request_form_box-1 .box_content .input_box h5,
+.send_money_form .popup_content .transfer_form .tranfer_form_section .send_form_box-1 .box_content .input_box_1 h5,
+.receive_money_form .popup_content .transfer_form .tranfer_form_section .request_form_box-1 .box_content .input_box_1 h5
+{
+    margin: 0;
+    font-size: 14.5px;
+    font-weight: 500;
+    color: #444;
+}
+.send_money_form .popup_content .transfer_form .tranfer_form_section .send_form_box-1 .box_content .input_box .input_box_item,
+.receive_money_form .popup_content .transfer_form .tranfer_form_section .request_form_box-1 .box_content .input_box .input_box_item,
+.send_money_form .popup_content .transfer_form .tranfer_form_section .send_form_box-1 .box_content .input_box_1 .input_box_item,
+.receive_money_form .popup_content .transfer_form .tranfer_form_section .request_form_box-1 .box_content .input_box_1 .input_box_item
+{
+    width: 100%;
+    min-height: 30px;
+    /* border: 0.2px solid blue; */
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.send_money_form .popup_content .transfer_form .tranfer_form_section .send_form_box-1 .box_content .input_box_1 .input_box_item,
+.receive_money_form .popup_content .transfer_form .tranfer_form_section .request_form_box-1 .box_content .input_box_1 .input_box_item
+{
+    border: 0.2px solid rgb(162, 212, 196);
+}
+.send_money_form .popup_content .transfer_form .tranfer_form_section .send_form_box-1 .box_content .input_box .input_box_item .input_icon,
+.receive_money_form .popup_content .transfer_form .tranfer_form_section .request_form_box-1 .box_content .input_box .input_box_item .input_icon
+{
+    position: relative;
+    width: 35px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(42, 170, 138);
+}
+.send_money_form .popup_content .transfer_form .tranfer_form_section .send_form_box-1 .box_content .input_box .input_box_item .input_icon i,
+.receive_money_form .popup_content .transfer_form .tranfer_form_section .request_form_box-1 .box_content .input_box .input_box_item .input_icon i
+{
+    font-size: 17px;
+    color: #fff;
+}
+.send_money_form .popup_content .transfer_form .tranfer_form_section .send_form_box-1 .box_content .input_box .input_box_item input,
+.receive_money_form .popup_content .transfer_form .tranfer_form_section .request_form_box-1 .box_content .input_box .input_box_item input
+{
+    position: relative;
+    width: calc(100% - 135px);
+    height: 43px;
+    padding: 5px 12px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    resize: none;
+    color: #555;
+}
+.send_money_form .popup_content .transfer_form .tranfer_form_section .send_form_box-1 .box_content .input_box_1 .input_box_item input,
+.receive_money_form .popup_content .transfer_form .tranfer_form_section .request_form_box-1 .box_content .input_box_1 .input_box_item input
+{
+    position: relative;
+    width: 100%;
+    height: 43px;
+    padding: 5px 12px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: 600;
+    border: 0.2px solid rgb(162, 212, 196);
+    outline: none;
+    resize: none;
+    color: #555;
+}
+.send_money_form .popup_content .transfer_form .tranfer_form_section .send_form_box-1 .box_content .currency_type,
+.receive_money_form .popup_content .transfer_form .tranfer_form_section .request_form_box-1 .box_content .currency_type
+{
+    position: relative;
+    width: 100px;
+    height: 43px;
+    /* border: 0.2px solid green; */
+    padding: 5px 15px;
+    box-sizing: border-box;
+    background: rgb(42, 170, 138);
+}
+.send_money_form .popup_content .transfer_form .tranfer_form_section .send_form_box-1 .box_content .currency_type select,
+.receive_money_form .popup_content .transfer_form .tranfer_form_section .request_form_box-1 .box_content .currency_type select
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    background: rgb(42, 170, 138);
+    color: #ffffff;
+    border: none;
+    outline: none;
+    resize: none;
+}
+.send_money_form .popup_content .transfer_form .tranfer_form_section .send_form_box-1 .box_content .fee
+{
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+}
+.send_money_form .popup_content .transfer_form .tranfer_form_section .send_form_box-1 .box_content .fee p
+{
+    margin: 0;
+    font-size: 15.5px;
+    font-weight: 400;
+    color: #8e9a9d;
+}
+.send_money_form .popup_content .transfer_form .tranfer_form_section .send_form_box-1 .box_content .fee p span
+{
+    font-weight: 600;
+    color: #7e898b;
+}
+.send_money_form .popup_content .transfer_form .tranfer_form_section .send_form_box-1 .box_content .exchange_value
+{
+    position: relative;
+    margin-top: 6px;
+    width: 100%;
+}
+.send_money_form .popup_content .transfer_form .tranfer_form_section .send_form_box-1 .box_content .exchange_value p
+{
+    margin: 0;
+    font-size: 13px;
+    font-weight: 400;
+    color: #8e9a9d;
+}
+.send_money_form .popup_content .transfer_form .tranfer_form_section .send_form_box-1 .box_content .exchange_value p span
+{
+    font-weight: 600;
+    color: #7e898b;
+}
+.send_money_form .popup_content .transfer_form .tranfer_form_section .send_form_box-1 .box_content .continue_btn,
+.receive_money_form .popup_content .transfer_form .tranfer_form_section .request_form_box-1 .box_content .continue_btn
+{
+    position: relative;
+    width: 100%;
+    margin-top: 15px;
+}
+.send_money_form .popup_content .transfer_form .tranfer_form_section .send_form_box-1 .box_content .continue_btn button,
+.receive_money_form .popup_content .transfer_form .tranfer_form_section .request_form_box-1 .box_content .continue_btn button
+{
+    position: relative;
+    width: 100%;
+    height: 43px;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    background: rgb(42, 170, 138);
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    color: #fff;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.15);
+}
+.send_money_form .popup_content .transfer_form .tranfer_form_section .send_form_box-1 .box_content .continue_btn button:hover
+{
+    background: rgb(19, 128, 100);
+    transition: 0.4s;
+}
+
+
+
+
+.receive_money_form .popup_content .transfer_form .tranfer_form_section .request_form_box-1 .box_content .reciever_location,
+.receive_money_form .popup_content .transfer_form .tranfer_form_section .request_form_box-1 .box_content .sender_location
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 17px;
+}
+.receive_money_form .popup_content .transfer_form .tranfer_form_section .request_form_box-1 .box_content .reciever_location  h5,
+.receive_money_form .popup_content .transfer_form .tranfer_form_section .request_form_box-1 .box_content .sender_location  h5
+{
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+}
+.receive_money_form .popup_content .transfer_form .tranfer_form_section .request_form_box-1 .box_content .reciever_location  .location,
+.receive_money_form .popup_content .transfer_form .tranfer_form_section .request_form_box-1 .box_content .sender_location  .location
+{
+    width: 100%;
+    height: 43px;
+    border: 0.2px solid rgb(81, 219, 173);
+    margin-top: 8px;
+    display: flex;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 5px 15px;
+    box-sizing: border-box;
+}
+.receive_money_form .popup_content .transfer_form .tranfer_form_section .request_form_box-1 .box_content .reciever_location  .location select,
+.receive_money_form .popup_content .transfer_form .tranfer_form_section .request_form_box-1 .box_content .sender_location  .location select
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    background: #fff;
+    color: #666;
+    border: none;
+    outline: none;
+    resize: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+@media only screen  and (max-width:450px)
+{
+    .send_money_form .popup_content,
+.receive_money_form .popup_content
+{
+    width: 350px;
+}
+.send_money_form .popup_content .transfer_form,
+.receive_money_form .popup_content .transfer_form
+{
+    width: 350px;
+}
+}
