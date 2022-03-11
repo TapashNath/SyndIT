@@ -15,13 +15,22 @@
                             <li><a href="#" onclick="appear_request_form()">Receive</a></li>
                             <li><a href="{{ route('about') }}">About Us</a></li>
                             <li><a href="{{ route('contact') }}">Support</a></li>
-                            <li><a href="{{ route('account') }}">Dashboard</a></li>
+                            @if (Session::get('user_id'))
+                                <li><a href="{{ route('account') }}">Dashboard</a></li>
+                            @endif
+
                         </ul>
                     </div>
-                    <div class="nav_btn">
+                    @if (Session::get('user_login'))
+                        <div class="nav_btn">
+                        <button><a href="{{ route('logout') }}">Logout</a></button>
+                        </div>
+                    @else
+                        <div class="nav_btn">
                         <button><a href="{{ route('login') }}">Login</a></button>
                         <button><a href="{{ route('login') }}">Sign up</a></button>
-                    </div>
+                        </div>
+                    @endif
                 </div>
             </nav>
 

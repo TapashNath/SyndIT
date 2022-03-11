@@ -40,3 +40,7 @@ Route::get('/contact', function () {
 Route::get('/login', function () {
     return view('frontend.login');
 })->name('login');
+
+Route::post('login', [UsersController::class,'login'])->name('name');
+Route::post('signup', [UsersController::class, 'signup'])->name('signup');
+Route::get('logout', [UsersController::class, 'logout'])->name('logout');
