@@ -12,14 +12,20 @@ use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
 {
+    public function index(Request $request)
+    {
+        $users = User::get();
+        return view('Admin.User.index', compact('users'));
+    }
 
-   public function signup(Request $request){
+    public function signup(Request $request)
+    {
         $result =  $request->validate([
             'email' => 'required',
             'name' => 'required',
             'password' => 'required | max : 10 ',
         ]);
-        $user = User::where('email',$request->email)->first();
+        $user = User::where('email', $request->email)->first();
         if ($user) {
             return redirect()->route('login')->with('error', 'Email Id Alrady Exists Another Account!');
         }
@@ -30,14 +36,14 @@ class UsersController extends Controller
         $user->password = Hash::make($request->password);
         if ($user->save()) {
             return redirect()->route('login')->with('success', 'Register Successfully');
-        }else{
-            return redirect()->route('login')->with('error','Register Successfully');
+        } else {
+            return redirect()->route('login')->with('error', 'Register Successfully');
         }
-   }
+    }
 
     public function login(Request $request)
     {
-       $result =  $request->validate([
+        $result =  $request->validate([
             'email' => 'required',
             'password' => 'required | max : 10 ',
         ]);
@@ -45,11 +51,10 @@ class UsersController extends Controller
         $data = User::where('email', $request->email)->first();
         if ($data) {
             if (!Hash::check($request->input('password'), $data->password)) {
-                return redirect()->back()->with('error','Password not mached');
+                return redirect()->back()->with('error', 'Password not mached');
             } else {
                 $remember = (!empty($request->remember)) ? TRUE : FALSE;
                 if ($remember) {
-                    
                 }
                 $data->updated_at = now();
                 $data->update();
@@ -60,7 +65,7 @@ class UsersController extends Controller
                 return redirect('/')->with('success', 'Wellcome ' . $data->name);
             }
         } else {
-            return redirect()->back()->with('error','The specified account does not exist');
+            return redirect()->back()->with('error', 'The specified account does not exist');
         }
     }
 
